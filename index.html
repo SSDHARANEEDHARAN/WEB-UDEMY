@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Fonts - Gabrito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title -->
+    <title>Udemy</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="section_one">
+            <h1 class="section_one__title">Udemy</h1>
+        </div>
+        <div class="section_two">
+            <i class="fa-solid fa-magnifying-glass" style="color: #0a0a0a;"></i>
+            <input class="section_two__input" type="text"
+                placeholder="Search for anything here. Tech, Business, Art, Science...">
+        </div>
+        <div class="section_three">
+            <p>Courses</p>
+            <p>My Learning</p>
+            <i class="fa-solid fa-cart-shopping" style="color: #030303;" onclick="showCart()"></i>
+            <span class="cart-count" id="cart-count">0</span>
+            <i class="fa-solid fa-bell" style="color: #020203;"></i>
+            <i class="fa-solid fa-user" style="color: #050505;"></i>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <button>Development</button>
+        <button>Business</button>
+        <button>IT & Software</button>
+        <button>Personal Development</button>
+        <button>Design</button>
+        <button>Marketing</button>
+    </div>
+
+    <!-- Banner -->
+    <div class="section_banner">
+        <img class="section_banner_img" src="IN FRONT VIEW.jpg" alt="Banner Image">
+    </div>
+
+    <!-- Recommended Courses -->
+    <div class="recommended">
+        <h3>Recommended for you</h3>
+        <p>Welcome to Udemy Course Hub—the ultimate destination for lifelong learners and aspiring professionals!
+            Discover a wide range of courses designed to empower you with practical skills and knowledge. Whether you’re
+            looking to boost your career, explore a new hobby, or deepen your understanding of a subject, we have
+            something for everyone.</p>
+
+        <div class="course_card_container">
+            <!-- Course Card Template -->
+            <div class="course_card">
+                <img src="PYTHON.jpg" alt="Course 1">
+                <p>2023 Python Data Visualization Master Class</p>
+                <p>Order to Start Learning</p>
+                <p>4.8 ⭐⭐⭐</p>
+                <p>Rs.2299 <del>Rs.5999</del></p>
+                <button onclick="addToCart('2023 Python Data Visualization Master Class', 299)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="BEST.jpg" alt="Course 2">
+                <p>Full Stack Development from Beginner to Pro</p>
+                <p>Few Slots Left</p>
+                <p>4.8 ⭐⭐⭐</p>
+                <p>Rs.77499 <del>Rs.11999</del></p>
+                <button onclick="addToCart('Full Stack Development', 7499)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="https://picsum.photos/200" alt="Course 3">
+                <p>100 Projects in Python</p>
+                <p>Get Learning With Python</p>
+                <p>4.8 ⭐⭐</p>
+                <p>Rs.3399 <del>Rs.11999</del></p>
+                <button onclick="addToCart('100 Projects in Python', 399)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="REACT.jpg" alt="Course 4">
+                <p>Build 30 Websites with React Native</p>
+                <p>Get Test to Know</p>
+                <p>4.8 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.9999 <del>Rs.11999</del></p>
+                <button onclick="addToCart('Build 30 Websites with React Native', 999)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="JAVA.jpg" alt="Course 5">
+                <p>Mastering JavaScript for Beginners</p>
+                <p>9h to Close Registration</p>
+                <p>4.7 ⭐⭐⭐⭐</p>
+                <p>Rs.22299 <del>Rs.28999</del></p>
+                <button onclick="addToCart('Mastering JavaScript', 299)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="CSS.jpg" alt="Course 6">
+                <p>Advanced CSS and Sass: Flexbox, Grid, & More</p>
+                <p>Order to Start Learning</p>
+                <p>4.9 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.599 <del>R1s.1999</del></p>
+                <button onclick="addToCart('Advanced CSS and Sass', 499)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="DATA SCIENCE.jpg" alt="Course 7">
+                <p>Data Science A-Z™: Real-Life Data Science Exercises</p>
+                <p>5 Moth Sections Get into First Step</p>
+                <p>4.8 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.5599 <del>Rs.9999</del></p>
+                <button onclick="addToCart('Data Science A-Z™', 599)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="REACT.jpg" alt="Course 8">
+                <p>React - The Complete Guide (incl Hooks, React Router, Redux)</p>
+                <p>Order to Start Learning</p>
+                <p>4.8 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.499 <del>Rs.1999</del></p>
+                <button onclick="addToCart('React - The Complete Guide', 499)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="MARKETING.jpg" alt="Course 9">
+                <p>The Complete Digital Marketing Course - 12 Courses in 1</p>
+                <p>70% Placements </p>
+                <p>4.7 ⭐⭐⭐⭐</p>
+                <p>Rs.33399 <del>Rs.39999</del></p>
+                <button onclick="addToCart('Digital Marketing Course', 399)">Order</button>
+            </div>
+
+            <div class="course_card">
+                <img src="MACHINE LEARNING.jpg" alt="Course 10">
+                <p>Machine Learning A-Z™: Hands-On Python & R In Data Science</p>
+                <p>Course Registration Closed </p>
+                <p>4.8 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.5599 <del>Rs.11999</del></p>
+                <button onclick="addToCart('Machine Learning A-Z™', 599)">Order</button>
+            </div>
+
+            <!-- Additional Courses -->
+            <div class="course_card_e">
+                <img src="MASTER DESIGN.jpg" alt="Master Brochure 1">
+                <p>Master Brochure Design Techniques</p>
+                <p>Start Your Design Journey</p>
+                <p>4.9 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.4499 <del>Rs.11999</del></p>
+                <button onclick="addToCart('Master Brochure Design Techniques', 499)">Order</button>
+            </div>
+
+            <div class="course_card_e">
+                <img src="DIGITAL MARKETING.jpg" alt="Master Brochure 2">
+                <p>Master Brochure Marketing Strategies</p>
+                <p>Become a Marketing Expert</p>
+                <p>4.8 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.5599 <del>Rs.11999</del></p>
+                <button onclick="addToCart('Master Brochure Marketing Strategies', 599)">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topics -->
+    <div class="topics">
+        <h1 class="topics__title">Topics recommended for you</h1>
+        <div class="topics__container">
+            <p>Websites</p>
+            <p>PHP</p>
+            <p>HTML</p>
+            <p>JavaScript</p>
+            <p>Azure</p>
+            <p>GitHub</p>
+            <p>React JS</p>
+            <p>MongoDB</p>
+            <p>CSS</p>
+        </div>
+    </div>
+
+    <!-- Most Popular -->
+    <div class="popular">
+        <h1>Most Popular</h1>
+        <p>Unlock your potential with our Most Popular 30 Website Building Courses, designed for aspiring developers and
+            entrepreneurs. Each course is crafted to provide hands-on experience in creating stunning, functional
+            websites, all while keeping affordability in mind.Affordable Pricing: Our courses are budget-friendly,
+            ensuring that everyone has access to quality education without breaking the bank.
+
+            Comprehensive Curriculum: Learn everything from HTML and CSS to advanced frameworks like React and
+            WordPress. Each course covers essential skills needed to succeed in today’s digital landscape.
+
+            Real-World Projects: Engage in practical projects that mimic real-life scenarios. Build your portfolio as
+            you learn, showcasing your skills to potential employers.
+
+            Strong Placement Opportunities: With a focus on industry-relevant skills, our courses are designed to
+            enhance your employability. Join our network of successful graduates who have secured positions in leading
+            companies.
+
+            Community Support: Gain access to a vibrant community of learners and instructors ready to support you on
+            your journey. Participate in discussions, ask questions, and share your progress.
+
+            Featured Courses</p>
+        <div class="popular__container">
+            <div class="course_card">
+                <img src="BEST.jpg" alt="Popular Course 1">
+                <p>Build 30 Websites with React Native</p>
+                <p>Order to Start Learning</p>
+                <p>4.8 ⭐⭐⭐⭐⭐</p>
+                <p>Rs.22999 <del>Rs.31999</del></p>
+                <button onclick="addToCart('Build 30 Websites with React Native', 999)">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer_s1">
+            <div class="footer_s1_pane1">
+                <p>Udemy</p>
+                <p>Teach on Udemy</p>
+                <p>Get the App</p>
+                <p>About Us</p>
+                <p>Contact Us</p>
+            </div>
+            <div class="footer_s2_pane1">
+                <p>Course</p>
+                <p>Blog</p>
+                <p>Affiliate</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+            </div>
+        </div>
+        <div class="footer_s2">
+            <p>© 2024 Udemy, Inc.</p>
+        </div>
+    </div>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart(courseName, price) {
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+            alert(`${courseName} has been added to your cart for $${price}.`);
+        }
+
+        function showCart() {
+            alert("This will show your cart contents.");
+        }
+    </script>
+</body>
+
+</html>
