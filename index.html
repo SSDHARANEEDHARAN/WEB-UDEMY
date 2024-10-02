@@ -22,7 +22,7 @@
     <!-- Navigation Bar -->
     <div class="navbar">
         <div class="section_one">
-            <h1 class="section_one__title">Udemy</h1>
+            <h1 class="section_one__title">UDEMY</h1>
         </div>
         <div class="section_two">
             <i class="fa-solid fa-magnifying-glass" style="color: #0a0a0a;"></i>
@@ -31,7 +31,13 @@
         </div>
         <div class="section_three">
             <p>Courses</p>
-            <p>My Learning</p>
+            <!--<p>My Learning</p>-->
+            <div class="my-learning">
+                <p>My Learning</p>
+                <div class="my-learning__popup">
+                    <p>You Did Not Purchase Anything Yet</p>
+                </div>
+            </div>
             <i class="fa-solid fa-cart-shopping" style="color: #030303;" onclick="showCart()"></i>
             <span class="cart-count" id="cart-count">0</span>
             <i class="fa-solid fa-bell" style="color: #020203;"></i>
@@ -53,6 +59,14 @@
     <div class="section_banner">
         <img class="section_banner_img" src="IN FRONT VIEW.jpg" alt="Banner Image">
     </div>
+
+    <!--OFFER PAGE-->
+    <div class="offer_banner">
+        <h2>Special Offer!</h2>
+        <p>Get 50% off on your first course! Use code: <strong>FIRST50</strong></p>
+        <button onclick="window.location.href='#'">Grab the Offer</button>
+    </div>
+
 
     <!-- Recommended Courses -->
     <div class="recommended">

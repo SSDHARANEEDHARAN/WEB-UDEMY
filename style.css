@@ -12,6 +12,29 @@ body {
     padding: 10px 20px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.my-learning {
+    position: relative;
+    cursor: pointer;
+}
+
+.my-learning__popup {
+    position: absolute;
+    background-color: white;
+    border: solid black 1px;
+    width: 100%;
+    top: 20px;
+    padding: 10px;
+    right: 0;
+    display: none;
+}
+
+.my-learning:hover .my-learning__popup {
+    display: block;
 }
 
 .section_one {
@@ -38,19 +61,19 @@ body {
 }
 
 .section_three p {
-    margin: 0 20px; 
+    margin: 0 20px;
     cursor: pointer;
 }
 
 .section_three i {
-    margin: 0 10px; 
+    margin: 0 10px;
     position: relative;
 }
 
 .cart-count {
     position: absolute;
     top: 5px;
-    right: 0; 
+    right: 0;
     background-color: #ff0000;
     color: white;
     border-radius: 50%;
@@ -60,7 +83,7 @@ body {
 
 .categories {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px 0;
     background-color: #f9f9f9;
 }
@@ -81,16 +104,33 @@ body {
 }
 
 .section_banner {
-    text-align: center;
-    margin: 20px 0;
+    text-align: right;
+    margin: 10px 0;
+    padding-right: 25px;
 }
 
 .section_banner_img {
-    width: 55%; 
+    width: 55%;
     border-radius: 10px;
 }
 
-.recommended, .topics, .popular {
+.offer_banner {
+    background-color: antiquewhite;
+    border: solid black 2px;
+    padding: 2%;
+    position: absolute;
+    top: 45%;
+    left: 3%;
+    width: 35%;
+    max-width: 400px; 
+    box-sizing: border-box;
+}
+
+
+
+.recommended,
+.topics,
+.popular {
     padding: 0 35px;
     margin: 20px 0;
 }
@@ -102,7 +142,8 @@ body {
     margin: 0 -10px;
 }
 
-.course_card, .course_card_e {
+.course_card,
+.course_card_e {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -113,16 +154,19 @@ body {
     transition: transform 0.2s;
 }
 
-.course_card:hover, .course_card_e:hover {
+.course_card:hover,
+.course_card_e:hover {
     transform: scale(1.02);
 }
 
-.course_card img, .course_card_e img {
-    width: 87%; 
+.course_card img,
+.course_card_e img {
+    width: 87%;
     border-radius: 10px;
 }
 
-.course_card button, .course_card_e button {
+.course_card button,
+.course_card_e button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -131,7 +175,8 @@ body {
     cursor: pointer;
 }
 
-.course_card button:hover, .course_card_e button:hover {
+.course_card button:hover,
+.course_card_e button:hover {
     background-color: #0056b3;
 }
 
