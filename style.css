@@ -24,13 +24,14 @@ body {
 
 .my-learning__popup {
     position: absolute;
-    background-color: white;
+    background-color: transparent;
     border: solid black 1px;
     width: 100%;
     top: 20px;
     padding: 10px;
     right: 0;
     display: none;
+    border-radius: 2px;
 }
 
 .my-learning:hover .my-learning__popup {
@@ -110,22 +111,39 @@ body {
 }
 
 .section_banner_img {
-    width: 55%;
+    width: 50%;
+    height: 50%;
     border-radius: 10px;
 }
 
 .offer_banner {
-    background-color: antiquewhite;
+    background-color: transparent;
     border: solid black 2px;
     padding: 2%;
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 3%;
     width: 35%;
-    max-width: 400px; 
+    max-width: 400px;
     box-sizing: border-box;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 .recommended,
