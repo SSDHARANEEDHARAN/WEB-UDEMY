@@ -271,7 +271,6 @@ body {
     }
 }
 
-/* Media Query for screens smaller than 600px */
 @media (max-width: 600px) {
     .course_card,
     .course_card_e {
