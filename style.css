@@ -17,6 +17,11 @@ body {
     z-index: 1000;
 }
 
+.Menu {
+    display: none;
+    display: flex;
+}
+
 .my-learning {
     position: relative;
     cursor: pointer;
@@ -59,6 +64,7 @@ body {
 .section_three {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .section_three p {
@@ -119,18 +125,21 @@ body {
 .offer_banner {
     background-color: transparent;
     border: solid black 2px;
-    padding: 2%;
+    padding: 5px; 
     position: absolute;
     top: 35%;
-    left: 3%;
-    width: 35%;
-    max-width: 400px;
-    box-sizing: border-box;
+    left: 5%;
+    width: 30%; 
+    max-width: 220px;
     animation-name: zoom;
     animation-duration: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+                rgba(240, 46, 170, 0.3) 10px 10px,
+                rgba(240, 46, 170, 0.2) 15px 15px,
+                rgba(240, 46, 170, 0.1) 20px 20px,
+                rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 @keyframes zoom {
@@ -144,7 +153,6 @@ body {
         transform: scale(1);
     }
 }
-
 
 .recommended,
 .topics,
@@ -221,18 +229,53 @@ body {
 .footer {
     background-color: #f9f9f9;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    
 }
 
 .footer_s1 {
-    display: inline-block;
+    display: flex;
+    justify-content: center; /* Center contents of footer_s1 */
+    width: 100%; /* Full width */
+}
+
+.footer_s1_pane1,
+.footer_s2_pane1 {
+    flex: 1;
+    margin: 0 270px;
 }
 
 .footer_s2 {
-    margin-top: 20px;
+    margin-top: 20px; /* Space above */
+    display: flex; /* Use flex to align items */
+    justify-content: space-between; /* Center within the footer_s2 */
 }
 
 .popular__container {
     justify-content: space-between;
     display: flex;
+}
+
+/* Media Query to control visibility of section_three and Menu */
+@media (max-width: 600px) {
+    .Menu {
+        display: block;
+    }
+}
+
+@media (min-width: 601px) {
+    .Menu {
+        display: none;
+    }
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .course_card,
+    .course_card_e {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
 }
